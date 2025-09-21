@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artista - Sell your Art, Reach Every Heart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+            /* Custom scrollbar styles */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #f1f5f9; /* cool-gray-100 */
+            }
+            .dark ::-webkit-scrollbar-track {
+                background: #1f2937; /* gray-800 */
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #4f46e5; /* brand-primary */
+                border-radius: 5px;
+            }
+            .dark ::-webkit-scrollbar-thumb {
+                background: #6366f1; /* lighter indigo */
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #4338ca; /* darker indigo */
+            }
+            
+            /* Animation for content pop-up */
+            .animate-on-scroll {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            }
+            .animate-on-scroll.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* Buyer component styles */
+            .bg-background {
+                background-color: #ffffff;
+            }
+            .dark .bg-background {
+                background-color: #111827;
+            }
+            .bg-surface {
+                background-color: #f9fafb;
+            }
+            .dark .bg-surface {
+                background-color: #1f2937;
+            }
+            .bg-surface-hover {
+                background-color: #f3f4f6;
+            }
+            .dark .bg-surface-hover {
+                background-color: #374151;
+            }
+            .text-on-surface {
+                color: #111827;
+            }
+            .dark .text-on-surface {
+                color: #f9fafb;
+            }
+            .text-on-surface-secondary {
+                color: #6b7280;
+            }
+            .dark .text-on-surface-secondary {
+                color: #9ca3af;
+            }
+            .border-surface-border {
+                border-color: #e5e7eb;
+            }
+            .dark .border-surface-border {
+                border-color: #374151;
+            }
+            .text-primary {
+                color: #4f46e5;
+            }
+            .text-secondary {
+                color: #e0e7ff;
+            }
+            .bg-primary {
+                background-color: #4f46e5;
+            }
+            .text-star-inactive {
+                color: #d1d5db;
+            }
+            .animate-fade-in {
+                animation: fadeIn 0.2s ease-in-out;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .logo{
+            height: 120px;
+            padding-bottom: 10px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable class-based dark mode
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#4f46e5', // A vibrant indigo
+                        'brand-secondary': '#e0e7ff', // A light indigo for backgrounds
+                        'brand-accent': '#ec4899', // A bright pink for accents
+                        'brand-dark': '#111827', // A deep gray for text
+                        primary: {
+                            DEFAULT: "#007a7a",
+                            light: "#e0f2f2",
+                            dark: "#005f5f",
+                        },
+                        surface: {
+                            DEFAULT: "#ffffff",
+                            dark: "#2c2c2c",
+                        },
+                        border: "#eaeaea",
+                        text: {
+                            primary: "#000000",
+                            secondary: "#333333",
+                            darkPrimary: "#f9f9f9",
+                            darkSecondary: "#a0a0a0",
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.1.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+        "react/": "https://aistudiocdn.com/react@^19.1.1/",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.1",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
