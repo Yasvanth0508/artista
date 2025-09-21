@@ -75,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ products = [], onSearch, onNavigate }) 
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
           {/* <img src alt="Logo" className="logo h-8" /> */}
-          <img src="./logo.png" alt="Logo" className="logo h-8" />
+          <img src="logo.png" alt="Logo" className="logo h-8" />
         </Link>
 
         {/* Desktop Links */}
