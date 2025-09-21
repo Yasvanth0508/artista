@@ -4,13 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBY4rSjiq1p_hD5SdOzDxkguiGueG7caYc",
-  authDomain: "artista-auth.firebaseapp.com",
-  projectId: "artista-auth",
-  storageBucket: "artista-auth.firebasestorage.app",
-  messagingSenderId: "795151021566",
-  appId: "1:795151021566:web:8883a3cc7d2fff19e23caf",
-  measurementId: "G-X81K60JNVF"
+  apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECTID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_FIREBASE_APPID,
 };
 
 // Initialize Firebase
