@@ -74,6 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ products = [], onSearch, onNavigate }) 
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
+          {/* <img src alt="Logo" className="logo h-8" /> */}
           <img src="./logo.png" alt="Logo" className="logo h-8" />
         </Link>
 
